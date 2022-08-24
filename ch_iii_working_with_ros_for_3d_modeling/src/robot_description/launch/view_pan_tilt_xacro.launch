@@ -1,0 +1,26 @@
+<launch>
+
+  <arg name="model"/>
+  <!--Parsing xacro and setting robot_description parameter-->
+  <param 
+    name="robot_description"
+    command="$(find xacro)/xacro $(find robot_description)/urdf/pan_tilt.xacro"/>
+  
+  <node 
+    name="joint_state_publisher_gui" 
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui"/>
+  
+  <node 
+    name="robot_state_publisher"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher"/>
+    
+  <node
+    name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find robot_description)/rviz/urdf.rviz"
+    required="true"/>
+  
+</launch>
