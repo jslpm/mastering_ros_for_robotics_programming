@@ -1,0 +1,31 @@
+<launch>
+
+  <!-- Load robot description to ROS parameter server -->
+  <param name="robot_description" 
+      command="$(find xacro)/xacro $(find rrbot_description)/urdf/rrbot.xacro"/>
+
+  <!-- Joint state publisher node send tf data to rviz-->
+  <node name="joint_state"
+    pkg="joint_state_publisher"
+    type="joint_state_publisher"/>
+
+  <!-- Only one can be selected at once (robot_state_publisher or robot_state_publisher_gui) -->
+
+  <!-- Robot state publisher node send joint values to joint state-->
+  <!-- <node name="robot_state"
+    pkg="robot_state_publisher"
+    type="robot_state_publisher"/> -->
+
+  <!-- Joint state gui node send joint values to joint state-->
+  <node name="joint_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui"/>
+
+  <!-- Run Rviz with predetermined configuration -->
+  <node name="rviz"
+    pkg="rviz"
+    type="rviz"
+    args="-d $(find rrbot_description)/launch/rrbot_config.rviz">
+  </node>
+  
+</launch>

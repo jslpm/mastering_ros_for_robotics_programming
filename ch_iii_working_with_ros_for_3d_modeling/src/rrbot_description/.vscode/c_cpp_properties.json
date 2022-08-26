@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/argosx/Downloads/mastering_ros_for_robotics_programming/ch_ii_gettint_started_with_ros_programming/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/argosx/Downloads/mastering_ros_for_robotics_programming/ch_ii_gettint_started_with_ros_programming/src/mastering_ros_demo/include/**",
+        "/home/argosx/Downloads/mastering_ros_for_robotics_programming/ch_iii_working_with_ros_for_3d_modeling/src/robot_description/include/**",
+        "/home/argosx/Downloads/mastering_ros_for_robotics_programming/ch_iii_working_with_ros_for_3d_modeling/src/rrbot_description/include/**",
+        "/home/argosx/Downloads/mastering_ros_for_robotics_programming/ch_iii_working_with_ros_for_3d_modeling/src/seven_dof_arm_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

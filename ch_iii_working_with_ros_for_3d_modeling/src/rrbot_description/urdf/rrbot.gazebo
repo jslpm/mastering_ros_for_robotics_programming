@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot>
+  <!-- Color Link 1 -->
+  <gazebo reference="link1">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- Color link 2 -->
+  <gazebo reference="link2">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <!-- Color link 3 -->
+  <gazebo reference="link3">
+    <material>Gazebo/Orange</material>
+  </gazebo>
+
+  <!-- Plugin gazebo_ros_control -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/rrbot</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+    </plugin>
+  </gazebo>
+
+
+</robot>

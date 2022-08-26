@@ -1,0 +1,8 @@
+https://classic.gazebosim.org/tutorials?tut=ros_control&cat=connect_ros
+https://answers.ros.org/question/348008/connecting-gazebo-and-rviz/
+http://wiki.ros.org/joint_state_publisher_gui
+http://wiki.ros.org/robot_state_publisher/Tutorials/Using%20the%20robot%20state%20publisher%20on%20your%20own%20robot
+http://wiki.ros.org/robot_state_publisher
+http://wiki.ros.org/joint_state_publisher
+https://classic.gazebosim.org/tutorials?tut=ros_gzplugins
+https://github.com/ros-simulation/gazebo_ros_demos/blob/kinetic-devel/rrbot_control/launch/rrbot_control.launch
