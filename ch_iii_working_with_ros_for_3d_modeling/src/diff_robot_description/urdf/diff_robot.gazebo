@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<robot>
+    <gazebo reference="base_footprint">
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="base_link">
+        <material>Gazebo/White</material>
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="caster_front_link">
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="caster_back_link">
+       <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="$left_wheel">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp  value="10000000.0" />
+      <kd  value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo reference="$right_wheel">
+      <mu1 value="1.0"/>
+      <mu2 value="1.0"/>
+      <kp  value="10000000.0" />
+      <kd  value="1.0" />
+      <fdir1 value="1 0 0"/>
+      <material>Gazebo/Grey</material>
+      <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+    <gazebo>
+      	<plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    	    <legacyMode>true</legacyMode>
+    	    <rosDebugLevel>Debug</rosDebugLevel>
+    	    <publishWheelTF>false</publishWheelTF>
+    	    <robotNamespace>/</robotNamespace>
+    	    <publishTf>1</publishTf>
+    	    <publishWheelJointState>false</publishWheelJointState>
+    	    <alwaysOn>true</alwaysOn>
+    	    <updateRate>100.0</updateRate>
+    	    <leftJoint>front_left_wheel_joint</leftJoint>
+    	    <rightJoint>front_right_wheel_joint</rightJoint>
+    	    <wheelSeparation>0.3</wheelSeparation>
+    	    <wheelDiameter>0.08</wheelDiameter>
+    	    <broadcastTF>1</broadcastTF>
+    	    <wheelTorque>30</wheelTorque>
+    	    <wheelAcceleration>1.8</wheelAcceleration>
+    	    <commandTopic>cmd_vel</commandTopic>
+    	    <odometryFrame>odom</odometryFrame> 
+    	    <odometryTopic>odom</odometryTopic> 
+    	    <robotBaseFrame>base_footprint</robotBaseFrame>
+        </plugin>
+    </gazebo> 
+</robot>
