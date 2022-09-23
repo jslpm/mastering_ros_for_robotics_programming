@@ -7,7 +7,7 @@
   </gazebo>
 
   <gazebo reference="base_link">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/White</material>
   </gazebo>
 
   <gazebo reference="shoulder_pan_link">
@@ -15,7 +15,7 @@
   </gazebo>
 
   <gazebo reference="shoulder_pitch_link">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/White</material>
   </gazebo>
 
   <gazebo reference="elbow_roll_link">
@@ -31,7 +31,7 @@
   </gazebo>
 
   <gazebo reference="wrist_pitch_link">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/White</material>
   </gazebo>
 
   <gazebo reference="gripper_roll_link">
@@ -39,15 +39,15 @@
   </gazebo>
 
   <gazebo reference="gripper_finger_link1">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/White</material>
   </gazebo>
 
   <gazebo reference="gripper_finger_link2">
-    <material>Gazebo/Gray</material>
+    <material>Gazebo/White</material>
   </gazebo>
 
   <gazebo reference="grasping_frame">
-    <material>Gazebo/White</material>
+    <material>Gazebo/Blue</material>
   </gazebo>
 
   <!-- ROS control plugin -->
