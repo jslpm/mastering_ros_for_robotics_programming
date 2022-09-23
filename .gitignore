@@ -6,3 +6,5 @@ ch_iii_working_with_ros_for_3d_modeling/devel/
 
 ch04/build/
 ch04/devel/
+
+notebooks/.ipynb_checkpoints/ch04_gazebo_simulation-checkpoint.ipynb
