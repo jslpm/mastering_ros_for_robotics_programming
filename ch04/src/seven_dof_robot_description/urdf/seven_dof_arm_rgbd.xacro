@@ -73,16 +73,16 @@
 
   <!-- xacro:macro for transmission block -->
   <xacro:macro name="transmission_block" params="trans_name joint_name motor_name">
-    <transmision name="${trans_name}">
-      <type>transmission_interface/SimpleTransmission</type>
-      <joint name="${joint_name}">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-      </joint>
-      <actuator name="${motor_name}">
-        <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-        <mechanicalReduction>1</mechanicalReduction>
-      </actuator>
-    </transmision>
+    <transmission name="${trans_name}">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="${joint_name}">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="${motor_name}">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
   </xacro:macro>
 
     <!-- LINKS AND JOINTS -->
@@ -134,7 +134,7 @@
       <geometry>
         <box size="0.1 0.1 0.1"/>
       </geometry>
-      <material name="Gray"/>
+      <material name="White"/>
     </visual>
 
     <collision>
@@ -166,6 +166,7 @@
       <geometry>
         <cylinder radius="${shoulder_pan_width}" length="${shoulder_pan_len}"/>
       </geometry>
+      <material name="Red"/>
     </visual>
 
     <collision>
@@ -195,7 +196,7 @@
       <geometry>
         <box size="${shoulder_pitch_len} ${shoulder_pitch_width} ${shoulder_pitch_height}"/>
       </geometry>
-      <material name="Gray"/>
+      <material name="White"/>
     </visual>
 
     <collision>
@@ -320,7 +321,7 @@
       <geometry>
         <box size="${wrist_pitch_len} ${wrist_pitch_width} ${wrist_pitch_height}"/>
       </geometry>
-      <material name="Gray"/>
+      <material name="White"/>
     </visual>
 
     <collision>
@@ -384,7 +385,7 @@
       <geometry>
         <box size="${left_gripper_len} ${left_gripper_width} ${left_gripper_height}"/>
       </geometry>
-      <material name="Gray"/>
+      <material name="White"/>
     </visual>
   
     <collision>
@@ -421,7 +422,7 @@
       <geometry>
         <box size="${right_gripper_len} ${right_gripper_width} ${right_gripper_height}"/>
       </geometry>
-      <material name="Gray"/>
+      <material name="White"/>
     </visual>
   
     <collision>
@@ -448,7 +449,7 @@
       <geometry>
         <box size="0.01 0.01 0.01"/>
       </geometry>
-      <material name="White"/>
+      <material name="Blue"/>
     </visual>
 
     <inertial>
@@ -474,6 +475,17 @@
   
   <!-- TRANSMISSIONS -->
 
+  <!-- <transmission name="tran1">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="shoulder_pan_joint">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission> -->
+
   <xacro:transmission_block trans_name="trans1" joint_name="shoulder_pan_joint" motor_name="motor1"/>
   <xacro:transmission_block trans_name="trans2" joint_name="shoulder_pitch_joint" motor_name="motor2"/>
   <xacro:transmission_block trans_name="trans3" joint_name="elbow_roll_joint" motor_name="motor3"/>
@@ -481,7 +493,7 @@
   <xacro:transmission_block trans_name="trans5" joint_name="wrist_roll_joint" motor_name="motor5"/>
   <xacro:transmission_block trans_name="trans6" joint_name="wrist_pitch_joint" motor_name="motor6"/>
   <xacro:transmission_block trans_name="trans7" joint_name="gripper_roll_joint" motor_name="motor7"/>
-  <xacro:transmission_block trans_name="trans7" joint_name="finger_joint1" motor_name="motor7"/>
-  <xacro:transmission_block trans_name="trans7" joint_name="finger_joint2" motor_name="motor7"/>
+  <xacro:transmission_block trans_name="trans8" joint_name="finger_joint1" motor_name="motor8"/>
+  <xacro:transmission_block trans_name="trans9" joint_name="finger_joint2" motor_name="motor9"/>
 
 </robot>

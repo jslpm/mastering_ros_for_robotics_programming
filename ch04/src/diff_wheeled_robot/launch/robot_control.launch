@@ -1,0 +1,15 @@
+<launch>
+
+    <!-- <node name="teleop_key" pkg="turtlesim" type="turtle_teleop_key" output="screen">
+        <remap from="turtle1/cmd_vel" to="cmd_vel"/>
+    </node> -->
+
+    <!-- differential_teleop_key already has its own built-in velocity smoother -->
+    <!-- It requires: sudo apt install ros-noetic-joy -->
+    <node name="diff_wheeled_robot_key" pkg="diff_wheeled_robot" type="diff_wheeled_robot_key.py" output="screen">
+        <param name="scale_linear" value="0.5" type="double"/>
+        <param name="scale_angular" value="1.5" type="double"/>
+        <remap from="turtlebot_teleop_keyboard/cmd_vel" to="/cmd_vel"/>
+    </node>
+
+</launch>

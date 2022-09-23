@@ -15,6 +15,10 @@
 
   <xacro:macro name="xtion_pro_live" params="name parent *origin *optical_origin">
 
+  <material name="DarkGrey">
+    <color rgba="${88/255} ${88/255} ${88/255} 1.0"/>
+  </material>
+
     <!-- frames in the center of the camera -->
     <joint name="${name}_joint" type="fixed">
       <xacro:insert_block name="origin"/>
